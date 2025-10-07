@@ -1,0 +1,9 @@
+# This is a minimal sshd_config used for authswitch integration tests.
+Port 22
+Protocol 2
+PasswordAuthentication yes
+PermitRootLogin prohibit-password
+
+# Example match block that should remain untouched
+Match Address 10.0.0.0/8
+    PasswordAuthentication no
